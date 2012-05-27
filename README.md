@@ -9,3 +9,4 @@ XOOPS Cube で使えるプリロードを集めてみました。
 * [SampleFetchBlockContents.class.php](https://raw.github.com/suin/xoopscube-preloads/master/SampleFetchBlockContents/SampleFetchBlockContents.class.php) : プリロードで特定のブロックの実行結果をSmartyに割り当てるサンプル
 * [SampleGetBlockContent.class.php](https://raw.github.com/suin/xoopscube-preloads/master/SampleGetBlockContent/SampleGetBlockContent.class.php) :
 * [ScrollToAgreeTOS.class.php](https://raw.github.com/suin/xoopscube-preloads/master/ScrollToAgreeTOS/ScrollToAgreeTOS.class.php): ユーザ登録時、利用規約を最後までスクロールしないと登録できなくするプリロード 
+* [WhenLoginGoTo.class.php](https://raw.github.com/suin/xoopscube-preloads/master/WhenLoginGoTo/WhenLoginGoTo.class.php): ログイン後の特定の画面へ飛ばすプリロード 
