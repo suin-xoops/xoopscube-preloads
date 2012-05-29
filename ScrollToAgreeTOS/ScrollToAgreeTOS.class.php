@@ -49,7 +49,6 @@ class ScrollToAgreeTOS extends XCube_ActionFilter
 	{
 		ob_start();
 		?>
-		//<script type="text/javascript">
 		jQuery(function($){
 			var TEXTAREA = 'textarea[name=disclaimer]';
 			var CHECK_BOX = 'input[type=checkbox][name=agree]';
@@ -64,9 +63,10 @@ class ScrollToAgreeTOS extends XCube_ActionFilter
 			}
 
 			var submitButton = $(TEXTAREA).parents('form').find(SUBMIT_BUTTON);
+			var submitButtonValue = $(submitButton).val();
 
 			$(CHECK_BOX).parent().hide();
-			$('<div />').text('最後までスクロールしてお読みいただくと送信ボタンが押せるようになります。').insertAfter(TEXTAREA);
+			$('<div />').text('最後までスクロールしてお読みいただくと「' + submitButtonValue + '」ボタンが押せるようになります。').insertAfter(TEXTAREA);
 
 			if ( $(CHECK_BOX).is(':checked') == false ) {
 				$(submitButton).attr('disabled', 'disabled');
@@ -79,7 +79,6 @@ class ScrollToAgreeTOS extends XCube_ActionFilter
 				}
 			});
 		});
-		//</script>
 		<?php
 		return ob_get_clean();
 	}
