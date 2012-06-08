@@ -10,3 +10,4 @@ XOOPS Cube で使えるプリロードを集めてみました。
 * [SampleGetBlockContent.class.php](https://raw.github.com/suin/xoopscube-preloads/master/SampleGetBlockContent/SampleGetBlockContent.class.php) :
 * [ScrollToAgreeTOS.class.php](https://raw.github.com/suin/xoopscube-preloads/master/ScrollToAgreeTOS/ScrollToAgreeTOS.class.php): ユーザ登録時、利用規約を最後までスクロールしないと登録できなくするプリロード 
 * [WhenLoginGoTo.class.php](https://raw.github.com/suin/xoopscube-preloads/master/WhenLoginGoTo/WhenLoginGoTo.class.php): ログイン後の特定の画面へ飛ばすプリロード 
+* [SystemRoles.class.php](https://raw.github.com/suin/xoopscube-preloads/master/SystemRoles/SystemRoles.class.php): グループ情報をソースコードで扱いやすくするプリロード
