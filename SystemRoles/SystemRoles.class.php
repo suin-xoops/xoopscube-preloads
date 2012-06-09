@@ -1,33 +1,4 @@
 <?php
-/**
- * Usage
- *
- * # Create configuration file either of:
- *
- * * XOOPS_ROOT_PATH/settings/roles.php
- * * XOOPS_TRUST_PATH/settings/roles.php
- *
- * # roles.php content
- *
- * If you want to give some roles with depending on group information,
- * You may describe like "if ( $user->belongsTo($groupId) ) $user->getRole($roleName)" in roles.php.
- *
- * Following example is the case that you give "Manager" role to users who belongs to "Manager" group (the ID may be 4).
- *
- * ```
- * $managerGroup = 4; // 4 is group ID
- * if ( $user->belongsTo($managerGroup) ) $user->getRole('Manager');
- * ```
- *
- * If you want to give some roles with depending on role information,
- * You may describe like "if ( $user->hasROle($roleNameA) ) $user->getRole($roleNameB)" in roles.php.
- *
- * Following example is the case that you give "Manager" role to users who has "Module.foo.Admin" role.
- *
- * ```
- * if ( $user->hasRole('Module.foo.Admin') ) $user->getRole('Manager');
- * ```
- */
 
 /**
  * SystemRole class
@@ -202,7 +173,7 @@ class SystemRoles_User
 	 * Give a role to this user
 	 * @param string $roleName
 	 */
-	public function getRole($roleName)
+	public function playsRole($roleName)
 	{
 		$this->principal->addRole($roleName);
 	}
