@@ -12,3 +12,4 @@ XOOPS Cube で使えるプリロードを集めてみました。
 * [WhenLoginGoTo.class.php](https://raw.github.com/suin/xoopscube-preloads/master/WhenLoginGoTo/WhenLoginGoTo.class.php): ログイン後の特定の画面へ飛ばすプリロード 
 * [SystemRoles.class.php](https://raw.github.com/suin/xoopscube-preloads/master/SystemRoles/SystemRoles.class.php): グループ情報をソースコードで扱いやすくするプリロード
 * [AdvancedValidators.class.php](https://raw.github.com/suin/xoopscube-preloads/master/AdvancedValidators/AdvancedValidators.class.php): XCube_ActionForm により高度なバリデーションを提供するプリロード
+* [AwesomeXoopsMapClassLoader.class.php](https://raw.github.com/suin/xoopscube-preloads/master/AwesomeXoopsMapClassLoader/AwesomeXoopsMapClassLoader.class.php): クラスオートロード機能を提供するプリロード
