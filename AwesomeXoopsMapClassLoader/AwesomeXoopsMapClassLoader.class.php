@@ -58,7 +58,8 @@ class AwesomeXoopsMapClassLoader extends XCube_ActionFilter
 	protected function _getClassMap()
 	{
 		return $this->_getXCubeClassMap()
-			+ $this->_getLegacyClassMap();
+			+ $this->_getLegacyClassMap()
+			+ $this->_getTrustModuleClassMap();
 	}
 
 	/**
@@ -161,5 +162,28 @@ class AwesomeXoopsMapClassLoader extends XCube_ActionFilter
 			'Legacy_iWorkflowClientDelegate' => XOOPS_ROOT_PATH.'/modules/legacy/class/interface/WorkflowClientDelegateInterface.class.php',
 			'Legacy_iWorkflowDelegate'       => XOOPS_ROOT_PATH.'/modules/legacy/class/interface/WorkflowDelegateInterface.class.php',
 		);
+	}
+
+	/**
+	 * Returns trust module class map
+	 * @throws RuntimeException
+	 * @return array
+	 */
+	protected function _getTrustModuleClassMap()
+	{
+		$maps = array();
+		$mapFiles = glob(XOOPS_TRUST_PATH.'/modules/*/class_map.php');
+
+		foreach ( $mapFiles as $file ) {
+			$map = require $file;
+
+			if ( is_array($map) === false ) {
+				throw new RuntimeException(sprintf('Failed to read class map file: %s', $file));
+			}
+
+			$maps += $map;
+		}
+
+		return $maps;
 	}
 }

@@ -1,0 +1,36 @@
+#!/usr/bin/env php
+<?php
+
+$grep = 'grep -r -e "\(class\|interface\) [A-Za-z0-9_]\+" .';
+
+$lines = shell_exec($grep);
+$lines = explode("\n", $lines);
+$lines = array_filter($lines);
+$map = array();
+
+foreach ( $lines as $line ) {
+	if ( ! preg_match('#^(?<path>.+\.php):((abstract )?class|interface)\s+(?<class>[A-Za-z0-9_]+)(\s+(extends|implements).+)?$#i', $line, $matches) ) {
+		throw new RuntimeException(sprintf('Unexpected format "%s"', $line));
+	}
+
+	$path  = $matches['path'];
+	$path  = realpath($path);
+	$path  = preg_replace('#^.*/xoops_trust_path/modules/#', "XOOPS_TRUST_PATH.'/modules/", $path);
+	$path  = preg_replace('#^.*/html/modules/#', "XOOPS_ROOT_PATH.'/modules/", $path);
+	$path  = $path ."'";
+	$class = $matches['class'];
+	$map[$class] = $path;
+}
+
+$classes = array_keys($map);
+$classes = array_map('strlen', $classes);
+$max     = max($classes);
+
+$paths = array();
+
+foreach ( $map as $class => $path ) {
+	$padding = str_repeat(' ', $max - strlen($class));
+	$paths[] = sprintf("'%s'%s => %s,", $class, $padding, $path);
+}
+
+echo sprintf("<?php\nreturn array(\n\t%s\n);\n", implode("\n\t", $paths));
