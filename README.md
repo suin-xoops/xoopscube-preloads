@@ -13,3 +13,5 @@ XOOPS Cube で使えるプリロードを集めてみました。
 * [SystemRoles.class.php](https://raw.github.com/suin/xoopscube-preloads/master/SystemRoles/SystemRoles.class.php): グループ情報をソースコードで扱いやすくするプリロード
 * [AdvancedValidators.class.php](https://raw.github.com/suin/xoopscube-preloads/master/AdvancedValidators/AdvancedValidators.class.php): XCube_ActionForm により高度なバリデーションを提供するプリロード
 * [AwesomeXoopsMapClassLoader.class.php](https://raw.github.com/suin/xoopscube-preloads/master/AwesomeXoopsMapClassLoader/AwesomeXoopsMapClassLoader.class.php): クラスオートロード機能を提供するプリロード
+* [CVE_2012_1823.class.php](https://raw.github.com/suin/xoopscube-preloads/master/CVE_2012_1823/CVE_2012_1823.class.php): CVE-2012-1823をついてくるハッカーの技術力を買ってリクルートするためのプリロード
+* [OpenGraphProtocolPlugin](https://github.com/suin/xoopscube-preloads/tree/master/OpenGraphProtocolPlugin): OGP(Open Graph Protocol)をXOOPS Cube Legacyで簡単に対応するためのプリロード
