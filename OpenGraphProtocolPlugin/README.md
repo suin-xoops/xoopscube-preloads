@@ -47,7 +47,7 @@ return array(
 ```php
 $root = XCube_Root::getSingleton();
 $root->mDelegateManager->add('OGP.SetUp', function (array &$ogpData) use ($story, $description) {
-	return array(
+	$ogpData = array(
 		'title'       => $story['title'],
 		'description' => $description,
 	);
