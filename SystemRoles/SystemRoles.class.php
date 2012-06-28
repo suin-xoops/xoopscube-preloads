@@ -10,7 +10,7 @@ class SystemRoles extends XCube_ActionFilter
 	public function preFilter()
 	{
 		$this->mRoot->mDelegateManager->add('Legacy_Controller.SetupUser', array($this, 'addCustomRoles'));
-		$this->mRoot->mDelegateManager->add('Legacy_RenderSystem.BeginRender', array($this, 'assignRoleVariables'));
+		$this->mRoot->mDelegateManager->add('XoopsTpl.New', array($this, 'assignRoleVariables'));
 	}
 
 	/**
