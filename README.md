@@ -16,3 +16,4 @@ XOOPS Cube で使えるプリロードを集めてみました。
 * [CVE_2012_1823.class.php](https://raw.github.com/suin/xoopscube-preloads/master/CVE_2012_1823/CVE_2012_1823.class.php): CVE-2012-1823をついてくるハッカーの技術力を買ってリクルートするためのプリロード
 * [OpenGraphProtocolPlugin](https://github.com/suin/xoopscube-preloads/tree/master/OpenGraphProtocolPlugin): OGP(Open Graph Protocol)をXOOPS Cube Legacyで簡単に対応するためのプリロード
 * [ProfileDefaultValueInjector](https://github.com/suin/xoopscube-preloads/tree/master/ProfileDefaultValueInjector): profileモジュールで登録した項目についてデフォルト値を設定できるようにするプリロード
+* [RedirectToXsnsFromUserInfo](https://github.com/suin/xoopscube-preloads/tree/master/RedirectToXsnsFromUserInfo): userinfo.phpのアクセスをxsnsモジュールのプロフィールページに転送するプリロード
