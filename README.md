@@ -17,3 +17,4 @@ XOOPS Cube で使えるプリロードを集めてみました。
 * [OpenGraphProtocolPlugin](https://github.com/suin/xoopscube-preloads/tree/master/OpenGraphProtocolPlugin): OGP(Open Graph Protocol)をXOOPS Cube Legacyで簡単に対応するためのプリロード
 * [ProfileDefaultValueInjector](https://github.com/suin/xoopscube-preloads/tree/master/ProfileDefaultValueInjector): profileモジュールで登録した項目についてデフォルト値を設定できるようにするプリロード
 * [RedirectToXsnsFromUserInfo](https://github.com/suin/xoopscube-preloads/tree/master/RedirectToXsnsFromUserInfo): userinfo.phpのアクセスをxsnsモジュールのプロフィールページに転送するプリロード
+* [QuickManageBlock](https://github.com/suin/xoopscube-preloads/tree/master/QuickManageBlock): ブロックのタイトルの右隅に編集ボタンを作ってくれます。公開側のブロックから編集したいブロックを視覚的に選べるので、直感的な操作ができるようになります。
