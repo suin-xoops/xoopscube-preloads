@@ -11,7 +11,7 @@
 
 ## インストール
 
-1 `TotalSocialButton.class.php` を `preload` フォルダに置く。
+1 [`TotalSocialButton.class.php`](https://raw.github.com/suin/xoopscube-preloads/master/TotalSocialButtons/TotalSocialButtons.class.php) を `preload` フォルダに置く。
 
 2 `theme.html` を編集してボタンを表示したい場所に下記のタグを書く。
 
