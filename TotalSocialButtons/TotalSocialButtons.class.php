@@ -22,7 +22,7 @@ class TotalSocialButtons extends XCube_ActionFilter
 	public function onRender(&$buffer, array $params)
 	{
 		$this->params = array(
-			'use' => 'mixi-voice mixi-check mixi-diary hatena-bookmark facebook-like twitter google-plus google-plus-share',
+			'use' => 'mixi-voice mixi-check mixi-diary hatena-bookmark twitter google-plus google-plus-share facebook-like',
 			'url' => $this->_getSelfURL(),
 			'title' => $this->_getSelfTitle(),
 		);
@@ -83,8 +83,21 @@ class TotalSocialButtons extends XCube_ActionFilter
 
 	protected function _plugin_facebook_like()
 	{
-		$url = urlencode($this->params['url']);
-		return '<iframe src="//www.facebook.com/plugins/like.php?href='.$url.'&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=389929677727639" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>';
+		if ( isset($this->params['fb_app_id']) === false or $this->params['fb_app_id'] == '' )
+		{
+			return 'Facebookを使うには fb_app_id を指定してください。';
+		}
+
+		$appId = $this->params['fb_app_id'];
+		$this->javascripts[] = '<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId='.$appId.'";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, \'script\', \'facebook-jssdk\'));</script>';
+		return '<div class="fb-like" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false"></div>';
 	}
 
 	protected function _plugin_twitter()
@@ -102,7 +115,7 @@ class TotalSocialButtons extends XCube_ActionFilter
 	protected function _plugin_google_plus_share()
 	{
 		$this->_addGooglePlusJavaScript();
-		return '<span style="width:70px; display:inline-block;"><div class="g-plus" data-action="share" data-annotation="bubble"></div></span>';
+		return '<span style="width:80px; display:inline-block;"><div class="g-plus" data-action="share" data-annotation="bubble"></div></span>';
 	}
 
 	protected function _addGooglePlusJavaScript()

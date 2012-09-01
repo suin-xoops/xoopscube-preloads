@@ -57,6 +57,14 @@ google-plus       : Google+1
 google-plus-share : Google+ 共有
 ```
 
+## Facebookいいね!
+
+Facebookいいね！を使うには `appId` が必要です。[Facebook Developers](https://developers.facebook.com/apps)から取得してください。
+
+```
+<{xoops_explaceholder control="TotalSocialButton" use="facebook-like" fb_app_id="1234567890"}>
+```
+
 ## mixiチェック
 
 mixiチェックは「識別キー」が必要です。[Mixi Developer Center](http://developer.mixi.co.jp)から取得してください。取得方法は、[こちら](http://developer.mixi.co.jp/connect/mixi_plugin/mixi_check/mixicheck/)を御覧ください。
