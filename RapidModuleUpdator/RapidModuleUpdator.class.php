@@ -234,7 +234,7 @@ jQuery(function($){
 
 		$('.rapidUpdateCheckbox').removeAttr('checked');
 
-		if ( isChecked == true )
+		if ( isChecked )
 		{
 			$('.rapidUpdateCheckbox').attr('checked', 'checked');
 		}
