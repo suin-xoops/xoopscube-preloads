@@ -1,0 +1,79 @@
+- dirname: default
+  target_key: null
+  target_type: "Preload"
+  version: "1.00"
+  replicatable: false
+  addon_url: "https://raw.github.com/suin/xoopscube-preloads/master"
+  detail_url: "https://github.com/suin/xoopscube-preloads/tree/master"
+  license: "GPL"
+  required: "normal"
+  description:
+    en: ""
+    ja: ""
+  tag:
+    en: ""
+    ja: ""
+- dirname: JquerySlideShow
+  version: "1.00"
+  description:
+    ja: "こういう( http://wex.im/ )スライドショーをXOOPS Cubeで使えるようにするプリロード"
+- dirname: ModuleAruno
+  version: "1.00"
+  description:
+    ja: "モジュールあるの？という疑問に答えるプリロード (開発者用)"
+- dirname: SampleFetchBlockContents
+  version: "1.00"
+  description:
+    ja: "プリロードで特定のブロックの実行結果をSmartyに割り当てるサンプル (開発者用)"
+- dirname: SampleGetBlockContent
+  version: "1.00"
+- dirname: ScrollToAgreeTOS
+  version: "1.00"
+  description:
+    ja: "ユーザ登録時、利用規約を最後までスクロールしないと登録できなくするプリロード"
+- dirname: WhenLoginGoTo
+  version: "1.00"
+  description:
+    ja: "ログイン後の特定の画面へ飛ばすプリロード"
+- dirname: SystemRoles
+  version: "1.00"
+  description:
+    ja: "グループ情報をソースコードで扱いやすくするプリロード"
+- dirname: AdvancedValidators
+  version: "1.00"
+  description:
+    ja: "XCube_ActionForm により高度なバリデーションを提供するプリロード"
+- dirname: AwesomeXoopsMapClassLoader
+  version: "1.00"
+  description:
+    ja: "クラスオートロード機能を提供するプリロード"
+- dirname: CVE_2012_1823
+  version: "1.00"
+  description:
+    ja: "CVE-2012-1823をついてくるハッカーの技術力を買ってリクルートするためのプリロード"
+  tag:
+    ja: "ネタ"
+- dirname: OpenGraphProtocolPlugin
+  version: "1.00"
+  description:
+    ja: "OGP(Open Graph Protocol)をXOOPS Cube Legacyで簡単に対応するためのプリロード"
+- dirname: ProfileDefaultValueInjector
+  version: "1.00"
+  description:
+    ja: "profileモジュールで登録した項目についてデフォルト値を設定できるようにするプリロード"
+- dirname: RedirectToXsnsFromUserInfo
+  version: "1.00"
+  description:
+    ja: "userinfo.phpのアクセスをxsnsモジュールのプロフィールページに転送するプリロード"
+- dirname: QuickManageBlock
+  version: "1.00"
+  description:
+    ja: "ブロックのタイトルの右隅に編集ボタンを作ってくれます。公開側のブロックから編集したいブロックを視覚的に選べるので、直感的な操作ができるようになります"
+- dirname: TotalSocialButtons
+  version: "1.00"
+  description:
+    ja: "mixi, facebook, twitter, google+などソーシャルボタンをテーマに簡単に埋め込めるプリロードです"
+- dirname: RapidModuleUpdator
+  version: "1.00"
+  description:
+    ja: "モジュール一括アップデートを提供するプリロード"
