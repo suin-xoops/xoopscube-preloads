@@ -1,7 +1,7 @@
 <?php
 
-$sourceFile = __DIR__.'/../xupdate/xupdate.yaml';
-$iniFile    = __DIR__.'/../xupdate/xupdate.ini';
+$sourceFile = __DIR__.'/../xupdate.yaml';
+$iniFile    = __DIR__.'/../xupdate.ini';
 $localizedIniFile = __DIR__.'/../xupdate/language/%s/xupdate.ini';
 $readmeTemplate = __DIR__.'/README.template.md';
 $readmeFile     = __DIR__.'/../README.md';
