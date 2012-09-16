@@ -96,8 +96,8 @@ class QuickManageBlock extends XCube_ActionFilter
 				$urluninstall = sprintf($baseUrluninstall, $block['id']);
 
 				$block['title'] .= '<span style="float:right;" class="block_controller">';
-				$block['title'] .= '<a href="'.$urlBlockEdit.'" ><img src="'.XOOPS_URL.'/modules/legacy/admin/theme/icons/edit.gif" /></a>';
-				$block['title'] .= '<a href="'.$urluninstall.'"><img src="'.XOOPS_URL.'/modules/legacy/admin/theme/icons/uninstall.gif" /></a>';
+				$block['title'] .= '<a href="'.$urlBlockEdit.'" ><img src="'.XOOPS_URL.'/modules/legacy/admin/theme/icons/edit.png" /></a>';
+				$block['title'] .= '<a href="'.$urluninstall.'"><img src="'.XOOPS_URL.'/modules/legacy/admin/theme/icons/uninstall.png" /></a>';
 				$block['title'] .= '</span>';
 				$blockIds[] = $block['id'];
 			}
