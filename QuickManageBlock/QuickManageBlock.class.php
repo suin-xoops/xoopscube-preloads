@@ -4,7 +4,7 @@
  *
  * PHP Version 5.2.0 or Upper version
  *
- * @package    QuickManageBlock
+ * @package    QuikManageBlock
  * @author     Hidehito NOZAWA aka Suin <http://ryus.co.jp>
  * @copyright  2010 Hidehito NOZAWA
  * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU GPL v2
@@ -95,10 +95,15 @@ class QuickManageBlock extends XCube_ActionFilter
 				$urlBlockEdit = $this->_getBlockEditUrl($block['id'], $blockTypes);
 				$urluninstall = sprintf($baseUrluninstall, $block['id']);
 
-				$block['title'] .= '<span style="float:right;" class="block_controller">';
-				$block['title'] .= '<a href="'.$urlBlockEdit.'" ><img src="'.XOOPS_URL.'/modules/legacy/admin/theme/icons/edit.gif" /></a>';
-				$block['title'] .= '<a href="'.$urluninstall.'"><img src="'.XOOPS_URL.'/modules/legacy/admin/theme/icons/uninstall.gif" /></a>';
-				$block['title'] .= '</span>';
+				$block_control = '<span style="float:right;" class="block_controller">';
+				$block_control .= '<a href="'.$urlBlockEdit.'" ><img src="'.XOOPS_URL.'/modules/legacy/admin/theme/icons/edit.png" /></a>';
+				$block_control .= '<a href="'.$urluninstall.'"><img src="'.XOOPS_URL.'/modules/legacy/admin/theme/icons/uninstall.png" /></a>';
+				$block_control .= '</span>';
+				if( strstr( $block['title'], 'none' ) ==true ) {
+					$block['content'] = $block_control . $block['content'];
+				} else {
+					$block['title'] .= $block_control;
+				}
 				$blockIds[] = $block['id'];
 			}
 
@@ -143,7 +148,7 @@ class QuickManageBlock extends XCube_ActionFilter
 		$this->session['redirect'] = false;
 		$url  = $this->session['url'];
 		$time = 1;
-		$message = 'ブロックを更新しました。';
+		$message = 'Block is Updated';
 		// TODO >> 「戻る」をクリックした場合、文言が合わない
 		$this->mRoot->mController->executeRedirect($url, $time, $message);
 	}
