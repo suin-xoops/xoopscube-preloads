@@ -97,7 +97,7 @@ class TotalSocialButtons extends XCube_ActionFilter
   js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId='.$appId.'";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, \'script\', \'facebook-jssdk\'));</script>';
-		return '<div class="fb-like" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false"></div>';
+		return '<div class="fb-like" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false" style="vertical-align:top;"></div>';
 	}
 
 	protected function _plugin_twitter()
