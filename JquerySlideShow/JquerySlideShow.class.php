@@ -5,8 +5,8 @@
  * PHP Version 5.2.4 or Upper version
  *
  * @package    JquerySlideShow
- * @author     Hidehito NOZAWA aka Suin <http://suin.asia/>
- * @copyright  2010 Hidehito NOZAWA
+ * @author     suin <http://suin.asia/>
+ * @copyright  2010 suin
  * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU GPL v2 or later
  *
  */

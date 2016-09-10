@@ -5,8 +5,8 @@
  * PHP Version 5.2.0 or Upper version
  *
  * @package    ModuleAruno
- * @author     Hidehito NOZAWA aka Suin <http://suin.asia>
- * @copyright  2011 Hidehito NOZAWA
+ * @author     suin <http://suin.asia>
+ * @copyright  2011 suin
  * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU GPL v2
  *
  */
